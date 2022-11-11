@@ -75,8 +75,7 @@
         />
 
 
-        <!-- Example add video  -->
-
+        
        
 
       </div>
@@ -112,58 +111,56 @@
 
   <script>
 
-    // You can change global variables here:
+    
 
-    var radius = 240; // how big of the radius
+    var radius = 240; 
+    var autoRotate = true; 
 
-    var autoRotate = true; // auto rotate or not
+    var rotateSpeed = -60; 
 
-    var rotateSpeed = -60; // unit: seconds/360 degrees
+    var imgWidth = 120; 
 
-    var imgWidth = 120; // width of images (unit: px)
-
-    var imgHeight = 170; // height of images (unit: px)
+    var imgHeight = 170; 
 
 
-    // Link of background music - set 'null' if you dont want to play background music
-
+    
     var bgMusicURL =
 
       "https://api-v2.soundcloud.com/tracks/308486718/albums?representation=mini&client_id=jOJjarVXJfZlI309Up55k93EUDG7ILW6&limit=10&offset=0&linked_partitioning=1&app_version=1666004844&app_locale=en";
 
-    var bgMusicControls = false; // Show UI music control
+    var bgMusicControls = false; 
 
 
     var settings = {
 
       particles: {
 
-        length: 500, // maximum amount of particles
+        length: 500, 
 
 
-        duration: 2, // particle duration in sec
+        duration: 2, 
 
 
-        velocity: 100, // particle velocity in pixels/sec
+        velocity: 100, 
 
 
-        effect: -0.75, // play with this for a nice effect
+        effect: -0.75, 
 
 
-        size: 30, // particle size in pixels
+        size: 30, 
 
       },
 
     };
 
 
-    /*
+    
 
 
- * RequestAnimationFrame polyfill by Erik Möller
+ 
 
 
- */
+ 
 
 
     (function () {
@@ -219,13 +216,6 @@
     })();
 
 
-    /*
-
-
- * Point class
-
-
- */
 
 
     var Point = (function () {
@@ -289,13 +279,6 @@
     })();
 
 
-    /*
-
-
- * Particle class
-
-
- */
 
 
     var Particle = (function () {
@@ -397,13 +380,6 @@
     })();
 
 
-    /*
-
-
- * ParticlePool class
-
-
- */
 
 
     var ParticlePool = (function () {
@@ -419,7 +395,7 @@
 
       function ParticlePool(length) {
 
-        // create and populate particle pool
+     
 
 
         particles = new Array(length);
@@ -437,7 +413,7 @@
         particles[firstFree].initialize(x, y, dx, dy);
 
 
-        // handle circular queue
+       
 
 
         firstFree++;
